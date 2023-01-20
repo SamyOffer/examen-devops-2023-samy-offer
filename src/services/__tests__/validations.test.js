@@ -23,4 +23,12 @@ describe("check gamerTag tests", () => {
         const result = checkGamerTag("12345678");
         expect(result).toEqual(true);
     });
+    test("should return true if the tag have at least 1 specail caracters", () => {
+        const result = checkGamerTag("12345678");
+        expect(result).toEqual(false);
+    });
+    test("should return true if the tag have at least 1 specail caracters", () => {
+        const result = checkGamerTag("12345678!");
+        expect(result).toEqual(true);
+    });
 });
