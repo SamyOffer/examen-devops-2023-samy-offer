@@ -1,6 +1,7 @@
 /* istanbul ignore file */
 try {
     const { isEmpty } = require("./services/validations");
+    const { checkGamerTag } = require("./services/validations");
     const gamerTagInput = document.getElementById("gamerTagInput");
     const checkButton = document.getElementById("gamerTagCheckButton");
     const feedbackMessage = document.getElementById("gamerTagFeedback");

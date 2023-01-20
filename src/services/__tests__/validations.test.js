@@ -20,7 +20,7 @@ describe("validations tests suites - isEmpty", () => {
 
 describe("check gamerTag tests", () => {
     test("should return true if the tag have at least 8 caracters", () => {
-        const result = checkGamerTag();
-        expect(result).toBe(true);
+        const result = checkGamerTag("12345678");
+        expect(result).toEqual(true);
     });
 });
