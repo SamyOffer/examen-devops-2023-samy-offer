@@ -19,7 +19,7 @@ describe("validations tests suites - isEmpty", () => {
 });
 
 describe("check gamerTag tests", () => {
-    test("should return true if the tag have at least 8 caracters", () => {
+    test("should return false if the tag have at least 8 caracters but no special character", () => {
         const result = checkGamerTag("12345678");
         expect(result).toEqual(false);
     });
@@ -29,6 +29,10 @@ describe("check gamerTag tests", () => {
     });
     test("should return true if the tag have at least 1 special caracters", () => {
         const result = checkGamerTag("12345678!");
+        expect(result).toEqual(true);
+    });
+    test("should return true if the tag have at least 1 special caracters, 1 number and length  8", () => {
+        const result = checkGamerTag("abcbdkdke1!");
         expect(result).toEqual(true);
     });
 });
